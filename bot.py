@@ -202,10 +202,10 @@ async def handle_ticket_close(interaction, channel=None):
         transcript += '💬 Messages:\n' + '\n'.join(messages)
 
         # Find or create log channel
-        logs_channel = discord.utils.get(channel.guild.channels, name='ticket-logs')
+        logs_channel = discord.utils.get(channel.guild.channels, name='log-ticket')
         if not logs_channel:
             logs_channel = await channel.guild.create_text_channel(
-                name='ticket-logs',
+                name='log-ticket',
                 overwrites={
                     channel.guild.default_role: discord.PermissionOverwrite(view_channel=False),
                     channel.guild.me: discord.PermissionOverwrite(view_channel=True, send_messages=True)
