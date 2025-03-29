@@ -54,6 +54,10 @@ The bot needs the following permissions:
 
 ## Notes
 
-- The bot will automatically create a 'ticket-logs' channel if it doesn't exist
+- The bot will automatically create a 'logs-ticket' channel if it doesn't exist
 - Only administrators can use the `/setticketpanel` command
-- Users can only close their own tickets unless they have admin permissions 
+- Users can only close their own tickets unless they have admin permissions
+
+## Missing stuff
+
+- closing tickets needs to work for non admin users like moderators -> use roles 
