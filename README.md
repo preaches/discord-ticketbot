@@ -1,4 +1,4 @@
-# Discord Ticket Bot (Python Version)
+# Discord Ticket Bot (it isnt perfect...a lot of stuff still needs to be fixed!!!)
 
 A Discord bot that creates a ticket system with a dropdown menu for different support categories.
 
