@@ -30,8 +30,6 @@ async def on_ready():
     # Loading all cogs beeb beep boop im a robot
     cogs = [
         'commands.help',
-        'commands.userinfo',
-        'commands.serverinfo',
         'commands.clear',
         'commands.delete',
         'commands.setticketpanel',

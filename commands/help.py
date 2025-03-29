@@ -34,9 +34,7 @@ class Help(commands.Cog):
         # General Commands
         embed.add_field(
             name="🛠️ General Commands",
-            value="`p/help` - Shows this help message\n"
-                  "`p/userinfo [@user]` - Shows user information\n"
-                  "`p/serverinfo` - Shows server information",
+            value="`p/help` - Shows this help message\n",
             inline=False
         )
 

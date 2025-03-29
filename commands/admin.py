@@ -53,12 +53,6 @@ class Admin(commands.Cog):
     async def stats(self, ctx):
         # Get all ticket channels
         ticket_channels = [channel for channel in ctx.guild.channels if channel.name.startswith('ticket-')]
-        
-        # Count tickets by category
-        categories = {}
-        for channel in ticket_channels:
-            category = channel.category.name if channel.category else "Uncategorized"
-            categories[category] = categories.get(category, 0) + 1
 
         # Create stats embed
         embed = discord.Embed(
@@ -67,11 +61,6 @@ class Admin(commands.Cog):
         )
         
         embed.add_field(name="Total Active Tickets", value=len(ticket_channels), inline=True)
-        embed.add_field(name="Total Categories", value=len(categories), inline=True)
-        
-        # Add category breakdown
-        category_stats = "\n".join([f"{category}: {count}" for category, count in categories.items()])
-        embed.add_field(name="Tickets by Category", value=category_stats, inline=False)
         
         # Add timestamp
         embed.set_footer(text=f"Generated at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
